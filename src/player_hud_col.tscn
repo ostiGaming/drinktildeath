@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "tool\nextends VBoxContainer\n\nvar player = null;\n\nonready var color = get_node(\"color\")\nonready var hp = get_node(\"hp\")\nonready var weapon = get_node(\"weapon\")\n\nfunc _ready():\n\tset_process(true);\n\tset_process_input(true);\n\thp.set_process_input(true);\n\thp.set_text(\"%d\" % 10)\n\nfunc _process(delta):\n\tif self.player == null:\n\t\treturn\n\thp.set_text(\"%s\" % self.player.hp)\n\nfunc _input_event(event):\n\tif event.type == InputEvent.MOUSE_BUTTON:\n\t\tself.player.set_hp(self.player.hp - 1)\n"
+
+[node name="player" type="VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 32.0
+margin/bottom = 130.0
+alignment = 0
+script/script = SubResource( 1 )
+
+[node name="color" type="TextureFrame" parent="."]
+
+rect/min_size = Vector2( 32, 32 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 32.0
+margin/bottom = 32.0
+stretch_mode = 0
+
+[node name="hp" type="Label" parent="."]
+
+rect/min_size = Vector2( 32, 32 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 36.0
+margin/right = 32.0
+margin/bottom = 68.0
+text = "50"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="weapon" type="TextureFrame" parent="."]
+
+rect/min_size = Vector2( 32, 32 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 72.0
+margin/right = 32.0
+margin/bottom = 104.0
+stretch_mode = 0
+
+
