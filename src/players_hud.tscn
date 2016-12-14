@@ -35,41 +35,41 @@ alignment = 0
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 64.0
-margin/bottom = 130.0
+margin/bottom = 200.0
 
 [node name="player1" parent="players_container" instance=ExtResource( 2 )]
 
 margin/left = 68.0
 margin/top = 0.0
 margin/right = 132.0
-margin/bottom = 130.0
+margin/bottom = 200.0
 
 [node name="player2" parent="players_container" instance=ExtResource( 2 )]
 
 margin/left = 136.0
 margin/top = 0.0
 margin/right = 200.0
-margin/bottom = 130.0
+margin/bottom = 200.0
 
 [node name="player3" parent="players_container" instance=ExtResource( 2 )]
 
 margin/left = 204.0
 margin/top = 0.0
 margin/right = 268.0
-margin/bottom = 130.0
+margin/bottom = 200.0
 
 [node name="player4" parent="players_container" instance=ExtResource( 2 )]
 
 margin/left = 272.0
 margin/top = 0.0
 margin/right = 336.0
-margin/bottom = 130.0
+margin/bottom = 200.0
 
 [node name="player5" parent="players_container" instance=ExtResource( 2 )]
 
 margin/left = 340.0
 margin/top = 0.0
 margin/right = 405.0
-margin/bottom = 130.0
+margin/bottom = 200.0
 
 

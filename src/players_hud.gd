@@ -8,5 +8,5 @@ func _ready():
 		var player_node = get_node("players_container/player%s" % i)
 		var p = Player.new()
 		p.icon = load("res://icons/player_%s.png" % Player.COLORS[i])
-		p.weapon = Player.WEAPONS.Axe
+		p.weapon = Player.WEAPONS.Knife
 		player_node.player = p
