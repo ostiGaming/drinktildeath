@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://player_hud_col.gd" type="Script" id=1]
 [ext_resource path="res://icons/event_dismember.png" type="Texture" id=2]
 [ext_resource path="res://fonts/moolbor.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://icons/weapon_axe.png" type="Texture" id=4]
 
 [node name="player" type="VBoxContainer"]
 
@@ -64,6 +65,7 @@ margin/left = 224.0
 margin/top = 424.0
 margin/right = 288.0
 margin/bottom = 488.0
+texture = ExtResource( 4 )
 expand = true
 stretch_mode = 0
 

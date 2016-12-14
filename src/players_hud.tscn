@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://players_hud.gd" type="Script" id=1]
 [ext_resource path="res://player_hud_col.tscn" type="PackedScene" id=2]
+[ext_resource path="res://roll.tscn" type="PackedScene" id=3]
 
 [node name="players_hud" type="Panel"]
 
@@ -27,7 +28,7 @@ size_flags/vertical = 2
 margin/left = -1.0
 margin/top = 0.0
 margin/right = 1.0
-margin/bottom = 0.0
+margin/bottom = -70.0
 alignment = 0
 
 [node name="player0" parent="players_container" instance=ExtResource( 2 )]
@@ -71,5 +72,17 @@ margin/left = 340.0
 margin/top = 0.0
 margin/right = 405.0
 margin/bottom = 200.0
+
+[node name="roll_button" parent="." instance=ExtResource( 3 )]
+
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+margin/left = 62.5
+margin/top = -173.0
+margin/right = -65.5
+margin/bottom = -301.0
+stretch_mode = 0
 
 
