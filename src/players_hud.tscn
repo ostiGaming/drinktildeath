@@ -1,10 +1,11 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://player_hud_col.tscn" type="PackedScene" id=1]
+[ext_resource path="res://player.gd" type="Script" id=2]
 
 [sub_resource type="GDScript" id=1]
 
-script/source = "extends Panel\n\nvar Player = preload(\'res://player.gd\');\n\nconst PLAYER_COLORS = [\n\t\'blue\',\n\t\'red\',\n\t\'green\',\n\t\'yellow\',\n\t\'purple\',\n\t\'brown\'\n]\n\nfunc _ready():\n\tvar players = [];\n\t\n\tfor i in range(6):\n\t\tvar player_node = get_node(\"players_container/player%s\" % i)\n\t\tvar p = Player.new()\n\t\tp.icon = load(\"res://icons/player_%s.png\" % PLAYER_COLORS[i])\n\t\tplayer_node.player = p\n"
+script/source = "extends Panel\n\nvar Player = preload(\'res://player.gd\');\n\nconst PLAYER_COLORS = [\n\t\'blue\',\n\t\'red\',\n\t\'green\',\n\t\'yellow\',\n\t\'purple\',\n\t\'brown\'\n]\n\nfunc _ready():\n\tvar players = [];\n\t\n\tfor i in range(6):\n\t\ti = 1\n\t\tvar player_node = get_node(\"players_container/player%s\" % i)\n\t\tvar p = Player.new()\n\t\tp.icon = load(\"res://icons/player_%s.png\" % PLAYER_COLORS[i])\n\t\tplayer_node.player = p\n"
 
 [node name="players_hud" type="Panel"]
 
@@ -41,6 +42,7 @@ margin/left = 16.0
 margin/top = 13.0
 margin/right = 48.0
 margin/bottom = 117.0
+script/script = ExtResource( 2 )
 
 [node name="player1" parent="players_container" instance=ExtResource( 1 )]
 
@@ -50,6 +52,7 @@ margin/left = 84.0
 margin/top = 13.0
 margin/right = 116.0
 margin/bottom = 117.0
+script/script = ExtResource( 2 )
 
 [node name="player2" parent="players_container" instance=ExtResource( 1 )]
 
@@ -59,6 +62,7 @@ margin/left = 152.0
 margin/top = 13.0
 margin/right = 184.0
 margin/bottom = 117.0
+script/script = ExtResource( 2 )
 
 [node name="player3" parent="players_container" instance=ExtResource( 1 )]
 
@@ -68,6 +72,7 @@ margin/left = 220.0
 margin/top = 13.0
 margin/right = 252.0
 margin/bottom = 117.0
+script/script = ExtResource( 2 )
 
 [node name="player4" parent="players_container" instance=ExtResource( 1 )]
 
@@ -77,6 +82,7 @@ margin/left = 288.0
 margin/top = 13.0
 margin/right = 320.0
 margin/bottom = 117.0
+script/script = ExtResource( 2 )
 
 [node name="player5" parent="players_container" instance=ExtResource( 1 )]
 
@@ -86,5 +92,6 @@ margin/left = 356.0
 margin/top = 13.0
 margin/right = 388.0
 margin/bottom = 117.0
+script/script = ExtResource( 2 )
 
 
