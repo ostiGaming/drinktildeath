@@ -6,7 +6,6 @@
 [node name="game" type="Node"]
 
 script/script = ExtResource( 1 )
-a = null
 
 [node name="players_hud" parent="." instance=ExtResource( 2 )]
 

@@ -4,7 +4,7 @@
 
 [sub_resource type="GDScript" id=1]
 
-script/source = "extends Panel\n\n# class member variables go here, for example:\n# var a = 2\n# var b = \"textvar\"\n\nvar Player = preload(\'res://player.gd\');\n\nfunc _ready():\n\tvar players = [];\n\tfor i in range(6):\n\t\tvar player_node = get_node(\"players_container/player%s\" % i)\n\t\tvar p = Player.new()\n\t\tplayer_node.player = p\n"
+script/source = "extends Panel\n\nvar Player = preload(\'res://player.gd\');\n\nconst PLAYER_COLORS = [\n\t\'blue\',\n\t\'red\',\n\t\'green\',\n\t\'yellow\',\n\t\'purple\',\n\t\'brown\'\n]\n\nfunc _ready():\n\tvar players = [];\n\t\n\tfor i in range(6):\n\t\tvar player_node = get_node(\"players_container/player%s\" % i)\n\t\tvar p = Player.new()\n\t\tp.icon = load(\"res://icons/player_%s.png\" % PLAYER_COLORS[i])\n\t\tplayer_node.player = p\n"
 
 [node name="players_hud" type="Panel"]
 
@@ -27,37 +27,64 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 0.0
+margin/left = -1.0
 margin/top = 0.0
-margin/right = 0.0
+margin/right = 1.0
 margin/bottom = 0.0
 alignment = 0
 
 [node name="player0" parent="players_container" instance=ExtResource( 1 )]
 
+size_flags/horizontal = 1
+size_flags/vertical = 1
+margin/left = 16.0
+margin/top = 13.0
+margin/right = 48.0
+margin/bottom = 117.0
+
 [node name="player1" parent="players_container" instance=ExtResource( 1 )]
 
-margin/left = 36.0
-margin/right = 68.0
+size_flags/horizontal = 1
+size_flags/vertical = 1
+margin/left = 84.0
+margin/top = 13.0
+margin/right = 116.0
+margin/bottom = 117.0
 
 [node name="player2" parent="players_container" instance=ExtResource( 1 )]
 
-margin/left = 72.0
-margin/right = 104.0
+size_flags/horizontal = 1
+size_flags/vertical = 1
+margin/left = 152.0
+margin/top = 13.0
+margin/right = 184.0
+margin/bottom = 117.0
 
 [node name="player3" parent="players_container" instance=ExtResource( 1 )]
 
-margin/left = 108.0
-margin/right = 140.0
+size_flags/horizontal = 1
+size_flags/vertical = 1
+margin/left = 220.0
+margin/top = 13.0
+margin/right = 252.0
+margin/bottom = 117.0
 
 [node name="player4" parent="players_container" instance=ExtResource( 1 )]
 
-margin/left = 144.0
-margin/right = 176.0
+size_flags/horizontal = 1
+size_flags/vertical = 1
+margin/left = 288.0
+margin/top = 13.0
+margin/right = 320.0
+margin/bottom = 117.0
 
 [node name="player5" parent="players_container" instance=ExtResource( 1 )]
 
-margin/left = 180.0
-margin/right = 212.0
+size_flags/horizontal = 1
+size_flags/vertical = 1
+margin/left = 356.0
+margin/top = 13.0
+margin/right = 388.0
+margin/bottom = 117.0
 
 

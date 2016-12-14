@@ -5,7 +5,7 @@ const WEAPONS = {
 	"Chainsaw": 3
 }
 
-var color = Color(0,0,0);
+var icon = null;
 var weapon = WEAPONS.Unarmed;
 var hp = 25 setget set_hp;
 var wounds = []; # array of current DoT inflicted
