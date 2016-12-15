@@ -16,13 +16,13 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 1
 size_flags/vertical = 1
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 408.0
-margin/bottom = 722.0
+margin/left = -435.0
+margin/top = -118.0
+margin/right = 839.0
+margin/bottom = 844.0
 texture = ExtResource( 2 )
 expand = true
-stretch_mode = 0
+stretch_mode = 6
 
 [node name="players_hud" parent="." instance=ExtResource( 3 )]
 

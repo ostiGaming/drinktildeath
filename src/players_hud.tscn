@@ -19,6 +19,7 @@ script/script = ExtResource( 1 )
 
 [node name="players_container" type="HBoxContainer" parent="."]
 
+editor/display_folded = true
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
@@ -79,10 +80,10 @@ anchor/left = 3
 anchor/top = 3
 anchor/right = 3
 anchor/bottom = 3
-margin/left = 62.5
-margin/top = -173.0
-margin/right = -65.5
-margin/bottom = -301.0
+margin/left = 66.5
+margin/top = -155.0
+margin/right = -61.5
+margin/bottom = -283.0
 stretch_mode = 0
 
 
