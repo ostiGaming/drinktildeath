@@ -1,0 +1,155 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://player_hud.gd" type="Script" id=1]
+[ext_resource path="res://fonts/moolbor.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://icons/weapon_axe.png" type="Texture" id=3]
+
+[sub_resource type="CanvasItemShaderGraph" id=1]
+
+_code = {
+"fragment": "vec3 nd1sl0=SRC_COLOR.rgb;
+COLOR.rgb=nd1sl0;
+",
+"fragment_ofs": 0,
+"light": "",
+"light_ofs": 0,
+"vertex": "vec3 nd1sl2=SRC_COLOR.rgb;
+vec3 nd1sl0=vec3(SRC_VERTEX,0);
+VERTEX=nd1sl0.xy;
+COLOR.rgb=nd1sl2;
+",
+"vertex_ofs": 0
+}
+_data = {
+"shaders": [ [ 0, 33, Vector2( 350, 40 ), null, null, [ 0, 1, 0, 2, 1, 2 ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ], [ 0, 33, Vector2( 350, 40 ), null, null, [ 0, 1, 0 ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ], [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ] ]
+}
+
+[sub_resource type="CanvasItemMaterial" id=2]
+
+shader/shader = SubResource( 1 )
+shader/shading_mode = 0
+
+[sub_resource type="Animation" id=3]
+
+resource/name = "show"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:margin/top")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 1 ),
+"transitions": FloatArray( -4, 1 ),
+"update": 0,
+"values": [ -1.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:margin/bottom")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 1 ),
+"transitions": FloatArray( -4, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[node name="player" type="Panel"]
+
+anchor/top = 2
+anchor/right = 1
+anchor/bottom = 2
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = -0.9992
+margin/right = 0.0
+margin/bottom = 0.0008
+script/script = ExtResource( 1 )
+player = null
+is_current = false
+
+[node name="info" type="VBoxContainer" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+alignment = 1
+
+[node name="hp" type="Label" parent="info"]
+
+rect/min_size = Vector2( 64, 32 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 405.0
+margin/bottom = 32.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.96875, 0.563843, 0.563843, 1 )
+custom_colors/font_color_shadow = Color( 0.878906, 0.0411987, 0.0411987, 1 )
+text = "25"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="weapon" type="TextureFrame" parent="info"]
+
+visibility/blend_mode = 1
+rect/min_size = Vector2( 64, 64 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 1
+margin/left = 170.0
+margin/top = 346.0
+margin/right = 234.0
+margin/bottom = 410.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 0
+
+[node name="color" type="Panel" parent="."]
+
+visibility/blend_mode = 1
+material/material = SubResource( 2 )
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
+rect/min_size = Vector2( 64, 24 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 1
+size_flags/vertical = 1
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+
+[node name="_anim" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/show = SubResource( 3 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+

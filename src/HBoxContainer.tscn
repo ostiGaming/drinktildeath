@@ -1,0 +1,141 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://uniform_container.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 0.886719, 0.124695, 0.124695, 1 )
+light_color = Color( 0.8, 0.8, 0.8, 1 )
+dark_color = Color( 0.8, 0.8, 0.8, 1 )
+border_size = 0
+border_blend = true
+draw_bg = true
+
+[node name="container" type="Container"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -51.0
+margin/top = 7.0
+margin/right = 469.0
+margin/bottom = 184.0
+script/script = ExtResource( 1 )
+resize = true
+
+[node name="Panel" type="Panel" parent="."]
+
+anchor/top = 2
+anchor/bottom = 2
+rect/min_size = Vector2( 64, 64 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 1
+margin/left = 17.0
+margin/top = -1.0565
+margin/right = 103.0
+margin/bottom = -0.0564972
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel1" type="Panel" parent="."]
+
+anchor/top = 2
+anchor/bottom = 2
+rect/min_size = Vector2( 64, 64 )
+focus_neighbour/left = NodePath(".")
+focus_neighbour/top = NodePath(".")
+focus_neighbour/right = NodePath(".")
+focus_neighbour/bottom = NodePath(".")
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 1
+margin/left = 101.0
+margin/top = 0.0508475
+margin/right = 187.0
+margin/bottom = 1.0452
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel2" type="Panel" parent="."]
+
+anchor/top = 2
+anchor/bottom = 2
+rect/min_size = Vector2( 64, 64 )
+focus_neighbour/left = NodePath(".")
+focus_neighbour/top = NodePath(".")
+focus_neighbour/right = NodePath(".")
+focus_neighbour/bottom = NodePath(".")
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 1
+margin/left = 169.0
+margin/top = -1.0565
+margin/right = 255.0
+margin/bottom = -0.0564972
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel3" type="Panel" parent="."]
+
+anchor/top = 2
+anchor/bottom = 2
+rect/min_size = Vector2( 64, 64 )
+focus_neighbour/left = NodePath(".")
+focus_neighbour/top = NodePath(".")
+focus_neighbour/right = NodePath(".")
+focus_neighbour/bottom = NodePath(".")
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 1
+margin/left = 240.0
+margin/top = 0.00564972
+margin/right = 326.0
+margin/bottom = 1.00565
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel4" type="Panel" parent="."]
+
+anchor/top = 2
+anchor/bottom = 2
+rect/min_size = Vector2( 64, 64 )
+focus_neighbour/left = NodePath(".")
+focus_neighbour/top = NodePath(".")
+focus_neighbour/right = NodePath(".")
+focus_neighbour/bottom = NodePath(".")
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 1
+margin/left = 309.0
+margin/top = -1.0678
+margin/right = 395.0
+margin/bottom = -0.0677966
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel5" type="Panel" parent="."]
+
+anchor/top = 2
+anchor/bottom = 2
+rect/min_size = Vector2( 64, 64 )
+focus_neighbour/left = NodePath(".")
+focus_neighbour/top = NodePath(".")
+focus_neighbour/right = NodePath(".")
+focus_neighbour/bottom = NodePath(".")
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 1
+margin/left = 375.0
+margin/top = 0.0
+margin/right = 461.0
+margin/bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+
+

@@ -1,0 +1,12 @@
+[gd_resource type="Theme" load_steps=2 format=1]
+
+[ext_resource path="res://fonts/GOTHIC.fnt" type="BitmapFont" id=1]
+
+[resource]
+
+resource/name = "main_theme"
+default_font = ExtResource( 1 )
+Panel/styles/panel = null
+Panel/styles/panelf = null
+Panel/styles/panelnc = null
+
