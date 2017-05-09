@@ -11,28 +11,21 @@ var container
 var player_node_proto
 
 # TODO: refactor me away
-var players = []
+export var players = []
 
-func _enter_tree():
+func _ready():
 	container = get_node("players_container")
 
 	_seed_players()
 	# let's hide unused players
-	for i in range(players_count, MAX_PLAYERS):
-	  container.get_child(i).hide()
-
-func _seed_players():
-	for i in range(0, players_count):
-		players.append(create_player(i))
-		container.get_child(i).player = players[i]
-
-func _ready():
+	# for i in range(players_count, MAX_PLAYERS):
+	#   container.get_child(i).hide()
+	
 	for i in range(0, MAX_PLAYERS):
 		if i == current_player: continue
 		container.get_child(i).do_hide()
 
 func set_current_player(value):
-	if !value: return
 	if !container: return
 	value = min(max(value, 0), players.size() - 1) # [0, MAX_PLAYERS]
 	if current_player == value: return
@@ -41,9 +34,16 @@ func set_current_player(value):
 	container.get_child(value).do_show()
 	current_player = value
 
+func _seed_players():
+	for i in range(0, players_count):
+		players.append(create_player(i))
+		container.get_child(i).player = players[i]
+
 func create_player(i):
 	var p = Player.new()
 	p.color = Player.COLORS[i]
 	p.weapon = Player.WEAPONS.Knife
 	return p
 	
+func next_player():
+	set_current_player((current_player + 1) % players_count)

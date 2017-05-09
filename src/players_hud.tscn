@@ -25,21 +25,21 @@ _data = {
 shader/shader = SubResource( 1 )
 shader/shading_mode = 0
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 
 resource/name = "player_0+show"
 length = 1.0
 loop = false
 step = 0.1
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 
 resource/name = "show_player_1"
 length = 1.0
 loop = false
 step = 0.1
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 
 resource/name = "show_player_2"
 length = 1.0
@@ -61,10 +61,10 @@ margin/bottom = 142.0
 script/script = ExtResource( 1 )
 players_count = 3
 current_player = 0
+players = [  ]
 
 [node name="players_container" type="Container" parent="."]
 
-editor/display_folded = true
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
@@ -129,10 +129,10 @@ margin/bottom = 1.0
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("../players_container")
-anims/player_0+show = SubResource( 4 )
-anims/show_player_1 = SubResource( 5 )
-anims/show_player_2 = SubResource( 6 )
-playback/active = true
+anims/player_0+show = SubResource( 3 )
+anims/show_player_1 = SubResource( 4 )
+anims/show_player_2 = SubResource( 5 )
+playback/active = false
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""

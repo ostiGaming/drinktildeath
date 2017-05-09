@@ -105,6 +105,7 @@ script/script = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
+player = null
 
 [node name="text" type="RichTextLabel" parent="."]
 

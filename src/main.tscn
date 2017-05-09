@@ -42,6 +42,7 @@ current_player = 2
 
 [node name="roll_Icon" parent="hud/theme" instance=ExtResource( 4 )]
 
+visibility/visible = false
 margin/left = 136.0
 margin/top = 399.0
 margin/right = 264.0
