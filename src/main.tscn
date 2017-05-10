@@ -36,7 +36,7 @@ margin/bottom = 0.0
 [node name="players_hud" parent="hud/theme" instance=ExtResource( 3 )]
 
 visibility/blend_mode = 1
-margin/bottom = 152.0
+margin/bottom = 150.0
 players_count = 4
 current_player = 2
 
@@ -51,6 +51,8 @@ params/resize_mode = 0
 params/stretch_mode = 0
 
 [node name="event_selector" parent="hud/theme" instance=ExtResource( 5 )]
+
+margin/top = 150.0
 
 [node name="background_img" type="TextureFrame" parent="."]
 

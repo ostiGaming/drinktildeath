@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://players_hud.gd" type="Script" id=1]
-[ext_resource path="res://uniform_container.gd" type="Script" id=2]
+[ext_resource path="res://addons/uniform_container/uniform_container.gd" type="Script" id=2]
 [ext_resource path="res://player_hud.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CanvasItemShaderGraph" id=1]

@@ -9,6 +9,7 @@ func _ready():
 	if !player: return
 	
 	randomize()
-	var weapon = int(rand_range(0, Player.WEAPONS.size()))
+	# TODO: make the good RNG
+	var weapon = randi() % (Player.WEAPONS.size() - 1) + 1
 	player.set_weapon(weapon)
 	found_weapon.set_normal_texture(Player.WEAPONS_ICONS[player.weapon])
